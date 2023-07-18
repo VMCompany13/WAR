@@ -32,6 +32,7 @@ namespace WebApiReact.Controllers
             User currentUs = GetCeurrentUserFromDb(userName);
 
             //todo add service to backend http
+            //перенести в dishcontroller
             /*var currentUser = _dbContext.Users.FirstOrDefault(x => x.Name == userName) ?? throw new Exception("Undefined user");
             var currentDishesDateId = _dbContext.UserToLink.Where(x => x.UserId == currentUser.UserId).Select(x => x.LinkId).ToList();
 
