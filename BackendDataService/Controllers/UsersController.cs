@@ -37,19 +37,6 @@ namespace BackendDataService.Controllers
         public void CreateUser(NewUserDto newUser)
         {
             _userDataWriter.CreateUser(newUser);
-            /*using var connection = CreateConnection();
-            connection.Open();
-            using var command = CreateCommand("" +
-                @"
-                INSERT INTO webapi.user
-(name, date_of_birth, is_del, is_blocked)
-VALUES(@name, @dateOfBirth, 0::bit, 0::bit);
-", connection);
-
-            command.Parameters.AddWithValue("@name", newUser.Name);
-            command.Parameters.AddWithValue("@dateOfBirth", newUser.DateOfBirth);
-
-            command.ExecuteNonQuery();*/
         }
 
         private NpgsqlConnection CreateConnection() =>
